@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Special Moment</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            color: white;
+            flex-direction: column;
+            position: relative;
+        }
+        .banner-rope {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 5px;
+            background: brown;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+        }
+        .banner-container {
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            animation: dance 1.5s infinite alternate ease-in-out;
+        }
+        @keyframes dance {
+            0% { transform: translateX(-50%) rotate(-5deg); }
+            100% { transform: translateX(-50%) rotate(5deg); }
+        }
+        .banner-letter {
+            font-size: 36px;
+            font-weight: bold;
+            background: linear-gradient(45deg, pink, red);
+            padding: 12px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 105, 180, 1);
+            display: inline-block;
+            position: relative;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.9);
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            0% { text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5); }
+            100% { text-shadow: 2px 2px 20px rgba(255, 255, 255, 1); }
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            margin-top: 80px;
+            animation: fadeIn 2s ease-in;
+            max-width: 90%;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        h1 {
+            font-size: 48px;
+            font-style: italic;
+            color: #ffcccb;
+            text-shadow: 3px 3px 15px rgba(255, 100, 100, 1);
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(45deg, red, pink);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 105, 180, 1);
+        }
+        @media (max-width: 768px) {
+            .banner-letter {
+                font-size: 24px;
+                padding: 8px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            .container {
+                padding: 15px;
+            }
+            button {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner-rope"></div>
+    <div class="banner-container">
+        <span class="banner-letter">H</span>
+        <span class="banner-letter">A</span>
+        <span class="banner-letter">P</span>
+        <span class="banner-letter">P</span>
+        <span class="banner-letter">Y</span>
+        <span class="banner-letter">A</span>
+        <span class="banner-letter">N</span>
+        <span class="banner-letter">N</span>
+        <span class="banner-letter">I</span>
+        <span class="banner-letter">V</span>
+        <span class="banner-letter">E</span>
+        <span class="banner-letter">R</span>
+        <span class="banner-letter">S</span>
+        <span class="banner-letter">A</span>
+        <span class="banner-letter">R</span>
+        <span class="banner-letter">Y</span>
+    </div>
+    <div class="container">
+        <h1>🎂 3rd Piece - My Proposal 💋</h1>
+        <p>From the moment we met, my life changed forever...The night I first asked you, Will you be mine?—my heart pounded like a storm, unsure of what was coming next. For a moment, time stood still, and I felt the weight of a thousand emotions crashing down on me. I was terrified—terrified of losing what we had, terrified that my feelings might not be enough. But then… you smiled. And in that single, breathtaking moment, your yes turned my world into something I had only dreamed of.
+
+            That night, under the soft glow of the stars, everything changed. It wasn’t just another memory; it became the moment—etched deep in my soul, forever irreplaceable. After our incredible tour, where every second with you felt like a dream, this was the perfect ending to a perfect journey. Or maybe, it was just the beginning of something even more beautiful. Because from that night on, every heartbeat, every whispered thought, and every glance at you reminded me that love isn't just a feeling—it's you. 💫❤️</p>
+        <button onclick="nextPage()">Move For 4th piece</button>
+    </div>
+    <script>
+        function nextPage() {
+            window.location.href = 'nextpage6.html';
+        }
+    </script>
+</body>
+</html>

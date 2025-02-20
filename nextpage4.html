@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/originals/79/fd/d1/79fdd17253b569a417e980a99aecd978.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .banner-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            position: relative;
+            gap: 10px;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffcc00;
+            color: #ff4b2b;
+            font-size: 30px;
+            font-weight: bold;
+            width: 50px;
+            height: 60px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.8);
+            position: relative;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+        }
+        
+        .banner.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .string {
+            width: 2px;
+            height: 20px;
+            background: white;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .cake {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff4b2b;
+            margin: 20px auto;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 15px 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 121, 1, 0.9);
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 0 15px rgba(255, 204, 0, 0.9); }
+            to { box-shadow: 0 0 25px rgba(255, 102, 0, 1); }
+        }
+
+        .cloud {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 25px;
+            width: 80%;
+            max-width: 600px;
+            margin: 30px auto;
+            color: black;
+            font-weight: bold;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+            font-size: 18px;
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.9);
+        }
+
+        .image {
+            display: block;
+            margin: 30px auto;
+            width: 80%;
+            max-width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px white;
+        }
+
+        .button {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 20px;
+            box-shadow: 0 0 15px rgba(255, 75, 43, 0.9);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(255, 75, 43, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="banner-container" id="bannerContainer">
+        <div class="banner"><div class="string"></div>H</div>
+        <div class="banner"><div class="string"></div>A</div>
+        <div class="banner"><div class="string"></div>P</div>
+        <div class="banner"><div class="string"></div>P</div>
+        <div class="banner"><div class="string"></div>Y</div>
+        <div class="banner"><div class="string"></div>A</div>
+        <div class="banner"><div class="string"></div>N</div>
+        <div class="banner"><div class="string"></div>N</div>
+        <div class="banner"><div class="string"></div>I</div>
+        <div class="banner"><div class="string"></div>V</div>
+        <div class="banner"><div class="string"></div>E</div>
+        <div class="banner"><div class="string"></div>R</div>
+        <div class="banner"><div class="string"></div>S</div>
+        <div class="banner"><div class="string"></div>A</div>
+        <div class="banner"><div class="string"></div>R</div>
+        <div class="banner"><div class="string"></div>Y</div>
+    </div>
+
+    <div class="cake">🎂 2nd Piece - Our First Eye Contact & How I Fell in Love 🎉</div>
+
+    <div class="cloud">
+        <p>"Our first trip together was a beautiful chapter of our love story, but the moments that truly stole my heart are the ones I still relive in my mind. That first eye contact—your gaze locking with mine, deep and enchanting—sent a rush of warmth through me. My cheeks burned with a blush, my neck instinctively bending down, trying to hide the emotions dancing in my eyes. But your gaze, so magnetic, pulled me closer, making the world around us fade into nothingness.
+
+            And then, in the car, as the road stretched endlessly before us, you sat so close to me, our bodies almost touching. That first accidental brush of your hand against mine felt like stepping into heaven—a spark so electric, so pure, that my heart forgot to beat for a second. But the moment that melted me completely was when you grabbed my hand, fingers intertwining with mine, all because of a mischievous little monkey. That unexpected touch, that perfect excuse, turned into one of the most cherished moments of my life. A moment of innocence, of love, of something so magical that even time seemed to pause, just to witness us.</p>
+    </div>
+
+    <img src="https://www.shutterstock.com/image-photo/vishwa-shanti-stupa-260nw-583163311.jpg" alt="Vishwa Shanti Stupa" class="image">
+
+    <button class="button" onclick="window.location.href='nextpage5.html'">Move to 3rd Piece</button>
+
+    <script>
+        window.onload = function() {
+            document.querySelectorAll('.banner').forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('show');
+                }, index * 300);
+            });
+        };
+    </script>
+</body>
+</html>
