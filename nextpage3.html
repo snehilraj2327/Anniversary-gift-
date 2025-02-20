@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary</title>
+    <style>
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/049/855/259/non_2x/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-photo.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .cake {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ff4b2b;
+            margin: 20px auto;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 15px 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 121, 1, 0.9);
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 0 15px rgba(255, 204, 0, 0.9); }
+            to { box-shadow: 0 0 25px rgba(255, 102, 0, 1); }
+        }
+
+        .glow-text {
+            font-size: 40px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 50px auto 20px;
+            letter-spacing: 3px;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+        }
+
+        .letter {
+            display: inline-block;
+            animation: dance 1.5s infinite alternate;
+            color: #ffcc00;
+        }
+
+        @keyframes dance {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .cloud {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 25px;
+            width: 80%;
+            max-width: 600px;
+            margin: 30px auto;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+            font-size: 18px;
+            text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.7);
+        }
+
+        .image {
+            display: block;
+            margin: 30px auto;
+            width: 80%;
+            max-width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px white;
+        }
+
+        .button {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 20px;
+            box-shadow: 0 0 15px rgba(255, 75, 43, 0.9);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 30px;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(255, 75, 43, 1);
+        }
+
+        @media (max-width: 600px) {
+            .cake {
+                font-size: 24px;
+            }
+
+            .glow-text {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cake">🎂 1st Piece - Our First Meet 🎉</div>
+
+    <div class="glow-text">
+        <span class="letter">H</span>
+        <span class="letter">a</span>
+        <span class="letter">p</span>
+        <span class="letter">p</span>
+        <span class="letter">y</span>
+        <span class="letter">&nbsp;</span>
+        <span class="letter">A</span>
+        <span class="letter">n</span>
+        <span class="letter">n</span>
+        <span class="letter">i</span>
+        <span class="letter">v</span>
+        <span class="letter">e</span>
+        <span class="letter">r</span>
+        <span class="letter">s</span>
+        <span class="letter">a</span>
+        <span class="letter">r</span>
+        <span class="letter">y</span>
+    </div>
+
+    <div class="cloud">
+        <p>Happy Anniversary, My Love! Do you remember OUR first meet? 💖 The moment I stepped into my aunt’s house, I never imagined my heart would skip a beat like this. And then, she appeared—graceful, radiant, and effortlessly beautiful. Her eyes held a spark of mischief, and her smile felt like poetry in motion. In that instant, the world around me faded, and all I could see was her. Was this love at first sight? Maybe. All I knew was that I wanted to get lost in her laughter, in her playful chaos. As we wandered together, her every little prank, every teasing glance made my heart race. Uff… her naughtiness was pure magic, and I was completely enchanted!"</p>
+    </div>
+
+    <img src="https://www.shutterstock.com/image-photo/vishwa-shanti-stupa-260nw-583163311.jpg" 
+         alt="Vishwa Shanti Stupa" class="image">
+
+    <button class="button" onclick="goToNextPage()">Let's Move to Next Piece</button>
+
+    <script>
+        function goToNextPage() {
+            window.location.href = 'nextpage4.html';
+        }
+    </script>
+</body>
+</html>

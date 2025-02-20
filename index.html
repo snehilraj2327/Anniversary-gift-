@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Rain Effect</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap');
+
+        body {
+            background-image: url('https://t4.ftcdn.net/jpg/04/94/85/25/360_F_494852538_r8ylVApdAY0YuWYCkWIsg5pDZkboERYI.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .ribbon-container {
+            position: relative;
+            width: 100vw;
+            height: 80px;
+            cursor: pointer;
+            overflow: hidden;
+            user-select: none;
+            z-index: 10;
+        }
+
+        .ribbon {
+            position: absolute;
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(to right, #ff6ec4, #7873f5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.5s ease-in-out;
+            border-radius: 50px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .knot {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(to right, #ff4b4b, #ff9a8b);
+            clip-path: polygon(50% 0%, 100% 30%, 80% 100%, 20% 100%, 0% 30%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            transition: all 0.5s ease-in-out;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translate(-50%, -50%) scale(1.2); }
+            50% { transform: translate(-50%, -55%) scale(1.3); }
+        }
+
+        .ribbon-container.open .ribbon {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        .ribbon-container.open .knot {
+            transform: translate(-50%, -50%) scale(0);
+        }
+
+        .heart {
+            position: fixed;
+            font-size: 24px;
+            color: red;
+            top: -10px;
+            opacity: 0.8;
+            animation: fall 3s linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) scale(0.8);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        .glow-text {
+            position: absolute;
+            top: 20%;
+            font-size: 30px;
+            font-family: 'Dancing Script', cursive;
+            color: white;
+            text-shadow: 0 0 15px #ff6ec4;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="ribbon-container" onclick="toggleRibbon(event)">
+        <div class="ribbon">Welcome My Love! ❤️</div>
+        <div class="knot"></div>
+    </div>
+    <div class="glow-text">A Magical Surprise Awaits... ✨</div>
+
+    <script>
+        function toggleRibbon(event) {
+            event.preventDefault();
+            document.querySelector('.ribbon-container').classList.add('open');
+
+            startHeartRain();
+
+            setTimeout(() => {
+                window.location.href = "nextpage.html";
+            }, 3500);
+        }
+
+        function startHeartRain() {
+            for (let i = 0; i < 50; i++) {
+                createHeart();
+            }
+        }
+
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤";
+            heart.style.left = `${Math.random() * window.innerWidth}px`;
+            heart.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            heart.style.fontSize = `${Math.random() * 25 + 15}px`;
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+    </script>
+</body>
+</html>
+z

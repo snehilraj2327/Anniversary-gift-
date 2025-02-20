@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Cutting Animation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap');
+        
+        body {
+            background: url('https://png.pngtree.com/thumb_back/fh260/background/20210912/pngtree-aesthetic-background-pink-pastel-image_866344.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .cake {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .layer {
+            width: 100px;
+            height: 60px;
+            background: #d2691e;
+            border-radius: 15px;
+            box-shadow: inset 0 -10px 0 #8b4513;
+            position: relative;
+            margin-bottom: -10px;
+            opacity: 0;
+            transform: translateY(50px) scale(0.8);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .layer:nth-child(2) { width: 150px; }
+        .layer:nth-child(3) { width: 200px; }
+        .layer:nth-child(4) { width: 250px; }
+        
+        .icing {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            width: 80%;
+            height: 20px;
+            background: pink;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: inset 0 -5px 0 #ff1493;
+        }
+        
+        .candle {
+            width: 10px;
+            height: 40px;
+            background: red;
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+        .flame {
+            width: 10px;
+            height: 15px;
+            background: orange;
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            animation: flicker 1s infinite alternate;
+        }
+        
+        @keyframes flicker {
+            0% { opacity: 0.8; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+        
+        .button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 18px;
+            background: #ff4081;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background: #e60073;
+        }
+
+        .cake-piece {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 100px;
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.5);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+        
+        .message-box {
+            display: none;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            font-size: 18px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="cake" id="cake">
+        <div class="layer"><div class="icing"></div></div>
+        <div class="layer"><div class="icing"></div></div>
+        <div class="layer"><div class="icing"></div></div>
+        <div class="layer"><div class="icing"></div></div>
+        <div class="candle">
+            <div class="flame"></div>
+        </div>
+    </div>
+    <button class="button" onclick="buildCake()">Build Cake</button>
+    <button class="button" onclick="cutCake()">Cut Cake</button>
+    <div class="message-box" id="messageBox">  Do you know what this cake means? Let me explain: Each slice represents our journey together this year. 🍰❤️
+        <button class="button" id="startJourney" onclick="goToNextPage();">Let's Start Journey</button>
+    </div>
+    <div class="cake-piece" id="cakePiece">🍰</div>
+    
+    <script>
+        function buildCake() {
+            const layers = document.querySelectorAll('.layer');
+            layers.forEach((layer, index) => {
+                setTimeout(() => {
+                    layer.style.opacity = '1';
+                    layer.style.transform = 'translateY(0) scale(1)';
+                }, index * 500);
+            });
+        }
+
+        function cutCake() {
+            const cake = document.getElementById('cake');
+            const messageBox = document.getElementById('messageBox');
+            const cakePiece = document.getElementById('cakePiece');
+            const startJourney = document.getElementById('startJourney');
+
+            cake.style.opacity = '0.7';
+            messageBox.style.display = 'block';
+            setTimeout(() => {
+                messageBox.style.opacity = '1';
+                startJourney.style.display = 'block';
+            }, 100);
+
+            setTimeout(() => {
+                cakePiece.style.opacity = '1';
+                cakePiece.style.transform = 'translate(-50%, -50%) scale(2)';
+            }, 500);
+
+            setTimeout(() => {
+                cakePiece.style.opacity = '0';
+                cakePiece.style.transform = 'translate(-50%, -50%) scale(0.5)';
+                cake.style.display = 'none';
+            }, 2000);
+        }
+        function goToNextPage() {
+            window.location.href = 'nextpage3.html';
+        }
+    </script>
+</body>
+</html>
