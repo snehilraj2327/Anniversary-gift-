@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Special Moment</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://www.shutterstock.com/image-photo/calm-weather-on-sea-ocean-600nw-2212935531.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: 'Great Vibes', cursive;
+            color: white;
+            flex-direction: column;
+            position: relative;
+        }
+        .banner-rope {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 5px;
+            background: gold;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+        }
+        .banner-container {
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            animation: floaty 1.5s infinite alternate ease-in-out;
+        }
+        @keyframes floaty {
+            0% { transform: translateX(-50%) translateY(-5px); }
+            100% { transform: translateX(-50%) translateY(5px); }
+        }
+        .banner-letter {
+            font-size: 36px;
+            font-weight: bold;
+            background: linear-gradient(45deg, purple, violet);
+            padding: 12px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(138, 43, 226, 1);
+            display: inline-block;
+            position: relative;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.9);
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            0% { text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5); }
+            100% { text-shadow: 2px 2px 20px rgba(255, 255, 255, 1); }
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            margin-top: 80px;
+            animation: fadeIn 2s ease-in;
+            max-width: 90%;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        h1 {
+            font-size: 48px;
+            font-style: italic;
+            color: #dda0dd;
+            text-shadow: 3px 3px 15px rgba(186, 85, 211, 1);
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(45deg, blue, purple);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(138, 43, 226, 1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(138, 43, 226, 1);
+        }
+        @media (max-width: 768px) {
+            .banner-letter {
+                font-size: 24px;
+                padding: 8px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            .container {
+                padding: 15px;
+            }
+            button {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner-rope"></div>
+    <div class="banner-container">
+        <span class="banner-letter">H</span>
+        <span class="banner-letter">A</span>
+        <span class="banner-letter">P</span>
+        <span class="banner-letter">P</span>
+        <span class="banner-letter">Y</span>
+        <span class="banner-letter">A</span>
+        <span class="banner-letter">N</span>
+        <span class="banner-letter">N</span>
+        <span class="banner-letter">I</span>
+        <span class="banner-letter">V</span>
+        <span class="banner-letter">E</span>
+        <span class="banner-letter">R</span>
+        <span class="banner-letter">S</span>
+        <span class="banner-letter">A</span>
+        <span class="banner-letter">R</span>
+        <span class="banner-letter">Y</span>
+    </div>
+    <div class="container">
+        <h1>🎂 4th Piece - Our First Call </h1>
+        <p> May 11, 2024—the day a simple call changed everything...May 11, 2024—the day a simple call changed everything. Stressed about my first exam, I reached out, hoping for a little comfort, but destiny had something far more beautiful in store. Accidentally—or perhaps cleverly—she got my number, and in that moment, fate wove its magic. Her voice, soft and soothing, felt like a melody I never wanted to stop listening to. With just a few words, she calmed the storm within me, replacing my worries with a warmth I couldn’t explain.
+
+            That call was meant to ease my stress, but instead, it became the beginning of something I never expected—something I never knew my heart was searching for. From that day on, her presence became my peace, her words my safe place. Maybe it was just an ordinary call, but to me, it was the first whisper of love, the first spark of a connection that would only grow stronger with time. And now, looking back, I realize—that moment wasn’t just about an exam. It was about her, about us, about a love that was always meant to be. ❤️✨</p>
+        <button onclick="nextPage()">Move For 5th piece</button>
+    </div>
+    <script>
+        function nextPage() {
+            window.location.href = 'nextpage7.html';
+        }
+    </script>
+</body>
+</html>
