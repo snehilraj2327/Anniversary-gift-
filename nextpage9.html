@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Special Journey</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963') no-repeat center center/cover;
+            min-height: 100vh; /* Allows scrolling */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            color: #fff;
+            overflow-x: hidden;
+            padding-bottom: 50px; /* Extra space at bottom */
+        }
+
+        .title {
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            margin: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .message-container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(5px);
+            max-width: 90%;
+            text-align: center;
+            margin: 20px auto; /* Adds spacing for scrolling */
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #ffb3c6;
+            text-shadow: 0 0 10px rgba(255, 182, 193, 0.8);
+        }
+
+        p {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .action-button {
+            padding: 12px 24px;
+            font-size: 1.2em;
+            background: linear-gradient(45deg, #ff7eb3, #ff758c);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .action-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Pop-ups */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            max-width: 90%;
+        }
+
+        .popup img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .close-btn {
+            background: red;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Add specific styles for the letter popup image */
+        #letterPopup img {
+            width: 100%; /* Set the width to 100% of the popup */
+            max-height: 80vh; /* Limit the height to 80% of the viewport */
+            object-fit: contain; /* Ensure the image fits within the bounds */
+            display: block;
+            margin: 0 auto; /* Center the image */
+        }
+
+        /* Add scrolling effect for the popup */
+        #letterPopup {
+            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: 90vh; /* Limit the popup height to 90% of the viewport */
+        }
+
+        /* Updated styles for the agreement popup image */
+        #agreementPopup img {
+            width: 100%; /* Set the width to 100% of the popup */
+            max-height: 80vh; /* Limit the height to 80% of the viewport */
+            object-fit: contain; /* Ensure the image fits within the bounds */
+            display: block;
+            margin: 0 auto; /* Center the image */
+        }
+
+        /* Add scrolling effect for the agreement popup */
+        #agreementPopup {
+            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: 90vh; /* Limit the popup height to 90% of the viewport */
+        }
+    </style>
+</head>
+<body>
+    <div class="title">🌸 🎂 I Love You 🌸</div>
+
+    <div class="message-container">
+        <h2>Thank You</h2>
+        <p>My Love, Thank you for being the most beautiful part of my life..Thank you for being the most beautiful part of my life. One whole year—365 days of love, laughter, fights, misunderstandings, and countless moments that tested us. Yet, through it all, you stayed. You never gave up on me, on us. I know I’m not perfect, and there were times I made mistakes, times when we both felt hurt, but no matter what, you always tried—you always gave your best. That means everything to me. Your love, your patience, and your effort make me the luckiest person in the world. I don’t say this enough, but I am endlessly grateful for you. No matter how many storms come our way, I promise—I will always choose you. I love you, today, tomorrow, and forever .</p>
+        <div class="button-container">
+            <button class="action-button" onclick="showPopup('certificate')">Print Certificate</button>
+        </div>
+    </div>
+
+    <div class="message-container">
+        <h2>A Promise</h2>
+        <p>My Forever, I don’t know what life has in store for us..I don’t know what life has in store for us, but there’s one thing I know for sure—no matter what happens, I will always be here. Through every joy, every heartbreak, every moment of doubt, and every dream we chase—I will be here, holding your hand, loving you with everything I have. You are the love I never knew I needed, the home I never want to leave. And so, today, I make you this promise: my heart will beat for you until my very last breath. But love isn’t just about one person giving their all—it’s about choosing each other, again and again. So today, I ask you, from the deepest part of my soul—will you always be mine, as I will always be yours?
+            Will you? ❤️.</p>
+        <div class="button-container">
+            <button class="action-button" onclick="showPopup('videoPopup')">Show a Video Clip</button>
+            <button class="action-button" onclick="showPopup('letterPopup')">Read a Letter</button>
+        </div>
+    </div>
+
+    <!-- New Message Container -->
+    <div class="message-container">
+        <h2>Ready for next year???</h2>
+        <p>One incredible year down, a lifetime to go! 💖 Are you ready for another adventure filled with love, surprises, and unforgettable moments? But wait… there’s a little agreement. If you're in, message me to seal the deal! 😉💌"</p>
+        <div class="button-container">
+            <button class="action-button" onclick="showPopup('agreementPopup')">Read Agreement</button>
+        </div>
+    </div>
+
+    <!-- Certificate Pop-up -->
+    <div id="certificate" class="popup">
+        <img src="https://raw.githubusercontent.com/snehilraj2327/Anniversary-gift-/refs/heads/main/Certificate.jpg" alt="Certificate of Love">
+        <button class="close-btn" onclick="closePopup('certificate')">Close</button>
+        <button class="action-button" onclick="window.print()">Print</button>
+    </div>
+
+    <!-- Video Pop-up -->
+    <div id="videoPopup" class="popup">
+        <video controls>
+            <source src="https://yourvideourl.com/love-video.mp4" type="video/mp4">
+        </video>
+        <button class="close-btn" onclick="closePopup('videoPopup')">Close</button>
+    </div>
+
+    <!-- Letter Pop-up -->
+    <div id="letterPopup" class="popup">
+        <img src="https://raw.githubusercontent.com/snehilraj2327/Anniversary-gift-/refs/heads/main/letter.jpg" alt="Letter">
+        <button class="close-btn" onclick="closePopup('letterPopup')">Close</button>
+    </div>
+
+    <!-- Agreement Pop-up -->
+    <div id="agreementPopup" class="popup">
+        <img src="https://raw.githubusercontent.com/snehilraj2327/Anniversary-gift-/refs/heads/main/Agreement.jpg" alt="Love Agreement">
+        <button class="close-btn" onclick="closePopup('agreementPopup')">Close</button>
+    </div>
+
+    <script>
+        function showPopup(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function closePopup(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
+</body>
+</html>
